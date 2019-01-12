@@ -1,0 +1,24 @@
+{
+    "ReRoutes": [
+      {
+        "Key": "FlightManagementApi",
+        "UpstreamPathTemplate": "/api/flight/",
+        "DownstreamPathTemplate": "/api/flight",
+        "DownstreamScheme": "http",
+        "ServiceName": "flightmanagementapi",
+        "LoadBalancerOptions": {
+          "Type": "RoundRobin"
+        }
+      },
+      {
+        "Key": "FlightManagementAPI",
+        "UpstreamPathTemplate": "/api/flight/{trailingSegments}",
+        "DownstreamPathTemplate": "/api/flight/{trailingSegments}",
+        "DownstreamScheme": "http",
+        "ServiceName": "flightmanagementapi",
+        "LoadBalancerOptions": {
+          "Type": "RoundRobin"
+        }
+      }
+    ]
+  }
