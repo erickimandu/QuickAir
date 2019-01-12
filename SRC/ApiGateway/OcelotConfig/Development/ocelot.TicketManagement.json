@@ -1,0 +1,28 @@
+{
+    "ReRoutes": [
+      {
+        "Key": "TicketManagementApi",
+        "UpstreamPathTemplate": "/api/ticketManagement/{trailingSegments}",
+        "DownstreamPathTemplate": "/api/ticketManagement/{trailingSegments}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 50002
+          }
+        ]
+      },
+      {
+        "Key": "TicketManagementApi",
+        "UpstreamPathTemplate": "/api/ticketManagementApi/{trailingSegments}",
+        "DownstreamPathTemplate": "/api/ticketManagementApi/{trailingSegments}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 50002
+          }
+        ]
+      }
+    ]
+  }

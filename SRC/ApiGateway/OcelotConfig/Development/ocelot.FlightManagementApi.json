@@ -1,0 +1,28 @@
+{
+    "ReRoutes": [
+      {
+        "Key": "FlightManagementApi",
+        "UpstreamPathTemplate": "/api/flight/",
+        "DownstreamPathTemplate": "/api/flight",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5001
+          }
+        ]
+      },
+      {
+        "Key": "FlightManagementApi",
+        "UpstreamPathTemplate": "/api/flight/{trailingSegments}",
+        "DownstreamPathTemplate": "/api/flight/{trailingSegments}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5001
+          }
+        ]
+      }
+    ]
+  }

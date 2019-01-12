@@ -1,0 +1,24 @@
+{
+    "ReRoutes": [
+      {
+        "Key": "CustomerManagementApi",
+        "UpstreamPathTemplate": "/api/customers/",
+        "DownstreamPathTemplate": "/api/customers",
+        "DownstreamScheme": "http",
+        "ServiceName": "customermanagementapi",
+        "LoadBalancerOptions": {
+          "Type": "RoundRobin"
+        }
+      },
+      {
+        "Key": "CustomerManagementApi",
+        "UpstreamPathTemplate": "/api/customers/{trailingSegments}",
+        "DownstreamPathTemplate": "/api/customers/{trailingSegments}",
+        "DownstreamScheme": "http",
+        "ServiceName": "customermanagementapi",
+        "LoadBalancerOptions": {
+          "Type": "RoundRobin"
+        }
+      }
+    ]
+  }

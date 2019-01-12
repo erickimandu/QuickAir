@@ -1,0 +1,24 @@
+{
+    "ReRoutes": [
+      {
+        "Key": "TicketManagementApi",
+        "UpstreamPathTemplate": "/api/ticket/",
+        "DownstreamPathTemplate": "/api/ticket",
+        "DownstreamScheme": "http",
+        "ServiceName": "ticketManagementApi",
+        "LoadBalancerOptions": {
+          "Type": "RoundRobin"
+        }
+      },
+      {
+        "Key": "TicketManagementApi",
+        "UpstreamPathTemplate": "/api/ticket/{trailingSegments}",
+        "DownstreamPathTemplate": "/api/ticket/{trailingSegments}",
+        "DownstreamScheme": "http",
+        "ServiceName": "ticketmanagementapi",
+        "LoadBalancerOptions": {
+          "Type": "RoundRobin"
+        }
+      }
+    ]
+  }
